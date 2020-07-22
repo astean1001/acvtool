@@ -10,11 +10,16 @@ import logging
 from operator import attrgetter
 from granularity import Granularity
 from coverage import CoverageData
-from instrumenting.apkil.smalitree import SmaliTree
+
+sys.path.extend(['./acvtool/smiler/instrumenting/apkil'])
+sys.path.extend(['./acvtool/smiler/instrumenting/'])
+sys.path.extend(['./acvtool/smiler/serialisation/'])
+
+from smalitree import SmaliTree
 from chameleon import PageTemplateLoader
 from chameleon.utils import Markup
-from instrumenting.utils import Utils as Utils2
-from serialisation.xml_serialiser import XmlSerialiser
+from utils import Utils as Utils2
+from xml_serialiser import XmlSerialiser
 import re
 
 COV_CLASS = 'cov' #html class, ex: '<span class="%COV_CLASS%"/>'

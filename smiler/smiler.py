@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import re
 import shutil
@@ -6,15 +7,18 @@ import threading
 import signal
 import logging
 import time
+
+sys.path.extend(['./acvtool/smiler/libs'])
+
 from config import config
 from granularity import Granularity
 from instrumenting import manifest_instrumenter
-from libs.libs import Libs
-from instrumenting.apkil.smalitree import SmaliTree
-from instrumenting.apktool_interface import ApktoolInterface
-from instrumenting.smali_instrumenter import Instrumenter
-from instrumenting.utils import timeit
-from instrumenting.utils import Utils
+from libs import Libs
+from smalitree import SmaliTree
+from apktool_interface import ApktoolInterface
+from smali_instrumenter import Instrumenter
+from utils import timeit
+from utils import Utils
 
 apk_info_pattern = re.compile("package: name='(?P<package>.*?)'")
 

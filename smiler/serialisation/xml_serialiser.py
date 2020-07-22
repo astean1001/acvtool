@@ -1,8 +1,8 @@
 import lxml
 from lxml import etree
 from lxml.etree import Element, SubElement
-from ..granularity import Granularity
-from smiler.instrumenting.utils import Utils as Utils2
+from granularity import Granularity
+from utils import Utils as Utils2
 
 class XmlSerialiser(object):
 
