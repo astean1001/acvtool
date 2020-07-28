@@ -168,6 +168,9 @@ def save_package_indexhtml(class_group, templates, output_dir, app_name, granula
 def LI_TAG(str):
     return '%s' % str
 
+def add_tab(txt):
+    return "\t{}".format(txt)
+
 def span_tab_tag(txt, cl=''):
     return span_tag("\t{}".format(txt), cl)
 
